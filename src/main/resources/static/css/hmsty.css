@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(https://picsum.photos/3000/2000/?image=1015);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background-color: #03a9f4;
+    opacity: 0.8;
+}
+li {
+    list-style: none;
+    display: inline;
+    font-size: 2vw;
+    margin: 30px;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    transition: 500ms;
+    display: block;
+    position: absolute;
+    width: inherit; height: 0.5vw;
+    top: 4vw; right: 0; bottom: 0; left: 0;
+    border-radius: 1rem 0;
+    background-color: white;
+}
+
+a:hover::after {
+    top: 3vw;
+}
